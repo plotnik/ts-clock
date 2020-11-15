@@ -1,0 +1,13 @@
+= Часы на Распе
+
+.kiosk.sh
+----
+#!/bin/bash
+xset s noblank
+xset s off
+xset -dpms
+
+unclutter -idle 0.5 -root &
+
+/usr/bin/chromium-browser --incognito --start-maximized --kiosk file:///home/pi/ts-clock/index.html
+----

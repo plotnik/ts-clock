@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Clock</title>
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"/>
+
+<link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet"> 
+
+	<style>
+		html, body {
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			margin:0;
+			padding:0;
+			border: 0;
+			background-color: #f8f4d0;
+			/*cursor: none;*/
+		}
+		
+		
+		#parent {
+			display: flex;
+			width: 100%;
+			height: 100%;			
+			
+			font-family: 'Neucha', cursive;
+		}
+
+		#clock {
+			margin: auto;
+			font-size: 60vh;
+			
+			width: 100%;
+			text-align: center;
+			color: navy;
+		}
+		
+	</style>
+
+	<script src="dist/ts-clock.js"></script>
+	<script>
+		function init() {
+			console.log('--- init');
+			tsClock();
+		}
+	</script>
+</head>
+<body onload="init()">
+  <div id="parent">	
+    <div id="clock" onclick="location.reload()">:</div>
+    <!--div><small>Amatic SC</small></div-->
+  </div>  
+</body>
+</html>
