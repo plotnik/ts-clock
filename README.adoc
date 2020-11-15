@@ -1,13 +1,16 @@
-= Часы на Распе
+= Clock on Raspberry Pi
+
+How to Run a Raspberry Pi Program on Startup::
+https://learn.sparkfun.com/tutorials/how-to-run-a-raspberry-pi-program-on-startup/method-2-autostart
 
 .kiosk.sh
 ----
 #!/bin/bash
-xset s noblank
-xset s off
-xset -dpms
+xset s noblank  # turn off screen blanking
+xset s off      # turn off screen saver
+xset -dpms      # turn off display power management system
 
-unclutter -idle 0.5 -root &
+#unclutter -idle 0.5 -root &
 
-/usr/bin/chromium-browser --incognito --start-maximized --kiosk file:///home/pi/ts-clock/index.html
+/usr/bin/chromium-browser --incognito --start-maximized --noerrdialogs --disable-infobars --kiosk file:///home/pi/Documents/ts-clock/index.html
 ----
